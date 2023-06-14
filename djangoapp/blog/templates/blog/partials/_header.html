@@ -1,11 +1,11 @@
 <header class="header section-wrapper">
   <div class="section-content-wide">
     <div class="section-gap">
-
+      
       <h1 class="blog-title center pb-base">
         <a class="blog-link" href="/">{{ site_setup.title }}</a>
       </h1>
-
+      
       {% if site_setup.show_description %}
         <p class="blog-description pb-base center">{{ site_setup.description }}</p>
       {% endif %}
@@ -30,11 +30,11 @@
           </form>
         </div>
       {% endif %}
-      
+
       {% if site_setup.show_menu %}
         <nav class="menu">
           <ul class="menu-items">
-            {% for link in site_setup.menulink_set.all %}
+            {% for link in site_setup.menu.all %}
               <li class="menu-item">
                 {% if link.new_tab %}
                   <a target="_blank" class="menu-link" href="{{ link.url_or_path }}">
@@ -50,7 +50,7 @@
           </ul>
         </nav>
       {% endif %}
-
+      
     </div>
   </div>
 </header>
